@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function countDown(secs, surl) {
+				//alert(surl);     
+				
+				if(--secs > 0) {
+					setTimeout("countDown(" + secs + ",'" + surl + "')", 10000);
+				} else {
+					location.href = surl;
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			countDown(1, 'echartsPie/index.html');
+		</script>
+	</body>
+
+</html>
